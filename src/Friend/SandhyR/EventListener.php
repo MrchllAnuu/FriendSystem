@@ -6,7 +6,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\Server;
 
-class EventListener implements Listener{
+class EventListener implements Listener {
 
     public function onJoin(PlayerJoinEvent $event){
         $playername = $event->getPlayer()->getName();
