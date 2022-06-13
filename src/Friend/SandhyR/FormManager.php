@@ -2,8 +2,9 @@
 
 namespace Friend\SandhyR;
 
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\Server;
+use Vecnavium\FormsUI\SimpleForm;
 
 class FormManager{
 
@@ -22,10 +23,7 @@ class FormManager{
     {
         $manager = new FriendManager();
         $friendcount = count($manager->getArrayFriend($player));
-        $api = Server::getInstance()->getPluginManager()->getPlugin("FormAPI");
-        if ($api === null) {
-        }
-        $form = $api->createSimpleForm(function (Player $player, $data) {
+        $form = new SimpleForm(function(Player $player, int $data = null){
             $result = $data;
             if ($result === null) {
                 return true;
@@ -69,10 +67,7 @@ class FormManager{
             $list[] = $p->getName();
         }
         $this->playerlist[$player->getName()] = $list;
-        $api = Server::getInstance()->getPluginManager()->getPlugin("FormAPI");
-        if ($api === null) {
-        }
-        $form = $api->createCustomForm(function (Player $player, array $data = null) {
+        $form = new SimpleForm(function(Player $player, int $data = null){
             $result = $data;
             if ($result === null) {
                 return true;
@@ -96,10 +91,7 @@ class FormManager{
 
     public function friendrequestform(Player $player){
         $manager = new FriendManager();
-        $api = Server::getInstance()->getPluginManager()->getPlugin("FormAPI");
-        if ($api === null) {
-        }
-        $form = $api->createSimpleForm(function (Player $player,$data) {
+        $form = new SimpleForm(function(Player $player, int $data = null){
             $result = $data;
             if ($result === null) {
                 return true;
@@ -118,10 +110,7 @@ class FormManager{
     }
 
     public function accfriend(Player $player){
-        $api = Server::getInstance()->getPluginManager()->getPlugin("FormAPI");
-        if ($api === null) {
-        }
-        $form = $api->createSimpleForm(function (Player $player,$data) {
+        $form = new SimpleForm(function(Player $player, int $data = null){
             $result = $data;
             if ($result === null) {
                 return true;
@@ -148,10 +137,7 @@ class FormManager{
 
     public function friendlistform(Player $player){
         $manager = new FriendManager();
-        $api = Server::getInstance()->getPluginManager()->getPlugin("FormAPI");
-        if ($api === null) {
-        }
-        $form = $api->createSimpleForm(function (Player $player,$data) {
+        $form = new SimpleForm(function(Player $player, int $data = null){
             $result = $data;
             if ($result === null) {
                 return true;
@@ -170,10 +156,7 @@ class FormManager{
     }
 
     public function unfriendform(Player $player){
-        $api = Server::getInstance()->getPluginManager()->getPlugin("FormAPI");
-        if ($api === null) {
-        }
-        $form = $api->createSimpleForm(function (Player $player,$data) {
+        $form = new SimpleForm(function(Player $player, int $data = null){
             $result = $data;
             if ($result === null) {
                 return true;
