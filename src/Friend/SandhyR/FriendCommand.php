@@ -4,14 +4,14 @@ namespace Friend\SandhyR;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class FriendCommand extends Command{
 
-    public function __construct(string $name, string $description)
+    public function __construct(string $description)
     {
-        parent::__construct($name, $description);
-        parent::setAliases(["f"]);
+        parent::__construct(friend, $description);
+        parent::setAliases(["f", "friends"]);
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args)
