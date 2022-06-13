@@ -1,0 +1,11 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Faizx511x/FriendSystem
+build-by-default: true
+branches:
+- main
+projects:
+  FriendSystem:
+    path: ""
+    libs:
+      - src: Vecnavium/FormsUI/FormsUI
+        version: ^1.1.2
+...
