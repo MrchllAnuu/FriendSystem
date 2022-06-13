@@ -2,7 +2,7 @@
 
 namespace Friend\SandhyR;
 
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class FriendManager{
 
