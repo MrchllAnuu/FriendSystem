@@ -74,7 +74,7 @@ class FormManager{
                 return true;
             }
             $manager = new FriendManager();
-            $index = $data[1];
+            $index = $data[0];
             $playername = $this->playerlist[$player->getName()][$index];
             $friend = Server::getInstance()->getPlayerExact($playername);
             if($friend->isOnline()) {
@@ -174,7 +174,7 @@ class FormManager{
             return false;
         });
         $form->setTitle("Unfriend");
-        $form->addLabel("Are you sure?");
+        $form->setContent("Are you sure?");
         $form->addButton("Yes");
         $form->addButton("Back");
         $form->sendToPlayer($player);
