@@ -1,5 +1,9 @@
 name: FriendSystem
 main: Friend\SandhyR\Friend
-author: SandhyR
-api: 3.0.0
+author: ["SandhyR", "FaizDev"]
+api: 4.0.0
 version: 1.0.0
+
+permissions:
+ friend.cmd:
+    default: true
