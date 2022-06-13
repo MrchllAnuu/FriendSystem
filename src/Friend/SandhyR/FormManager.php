@@ -16,7 +16,6 @@ class FormManager{
 
     public function __construct(Player $player)
     {
-        $this->player = $player;
         $this->friendform($player);
     }
 
@@ -74,7 +73,7 @@ class FormManager{
                 return true;
             }
             $manager = new FriendManager();
-            $index = $data[0];
+            $index = $data[];
             $playername = $this->playerlist[$player->getName()][$index];
             $friend = Server::getInstance()->getPlayerExact($playername);
             if($friend->isOnline()) {
