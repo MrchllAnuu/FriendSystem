@@ -73,7 +73,7 @@ class FormManager{
                 return true;
             }
             $manager = new FriendManager();
-            $index = $data[];
+            $index = $data[1];
             $playername = $this->playerlist[$player->getName()][$index];
             $friend = Server::getInstance()->getPlayerExact($playername);
             if($friend->isOnline()) {
