@@ -8,9 +8,9 @@ use pocketmine\player\Player;
 
 class FriendCommand extends Command{
 
-    public function __construct(string $description)
+    public function __construct(string $name, string $description)
     {
-        parent::__construct(friend, $description);
+        parent::__construct($name, $description);
         parent::setAliases(["f", "friends"]);
     }
 
