@@ -14,9 +14,9 @@ class FormManager{
     private $request = [];
     private $player2;
 
-    public function __construct(Player $player)
+    public function __construct()
     {
-        $this->friendform($player);
+        $this->friendform();
     }
 
     public function friendform(Player $player)
