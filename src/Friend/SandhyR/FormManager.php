@@ -5,6 +5,7 @@ namespace Friend\SandhyR;
 use pocketmine\player\Player;
 use pocketmine\Server;
 use Vecnavium\FormsUI\SimpleForm;
+use Vecnavium\FormsUI\CustomForm;
 
 class FormManager{
 
@@ -67,7 +68,7 @@ class FormManager{
             $list[] = $p->getName();
         }
         $this->playerlist[$player->getName()] = $list;
-        $form = new SimpleForm(function(Player $player, int $data = null){
+        $form = new CustomForm(function(Player $player, int $data = null){
             $result = $data;
             if ($result === null) {
                 return true;
