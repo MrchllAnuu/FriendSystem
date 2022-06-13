@@ -20,12 +20,12 @@ class Friend extends PluginBase{
 
     private $config;
 
-    public function onLoad()
+    public function onLoad() : void
     {
         self::$instance = $this;
     }
 
-    public function onEnable()
+    public function onEnable() : void
     {
         @mkdir($this->getDataFolder());
         $this->saveDefaultConfig();
