@@ -12,6 +12,7 @@ class FriendCommand extends Command{
     {
         parent::__construct($name, $description);
         parent::setAliases(["f", "friends"]);
+        $this->setPermission("friend.cmd");
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args)
