@@ -9,6 +9,7 @@ use Vecnavium\FormsUI\CustomForm;
 
 class FormManager{
 
+    private $player;
     private $playerlist = [];
     private $request = [];
     private $player2;
