@@ -74,7 +74,7 @@ class FormManager{
                 return true;
             }
             $manager = new FriendManager();
-            $index = $data[0];
+            $index = $data["player"];
             $playername = $this->playerlist[$player->getName()][$index];
             $friend = Server::getInstance()->getPlayerExact($playername);
             if($friend->isOnline()) {
@@ -85,7 +85,7 @@ class FormManager{
         });
         $form->setTitle("Request Friend");
         $form->addLabel("Send Friend Request");
-        $form->addDropdown("Select player", $this->playerlist[$player->getName()]);
+        $form->addDropdown("Select player", $this->playerlist[$player->getName()], null, "player");
         $form->sendToPlayer($player);
         return $form;
     }
