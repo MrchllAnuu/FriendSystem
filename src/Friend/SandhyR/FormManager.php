@@ -65,7 +65,8 @@ class FormManager{
     public function requestfriendform(Player $player){
         $list = [];
         foreach(Server::getInstance()->getOnlinePlayers() as $p){
-            $list[] = $p->getName();
+            if ($player->getName() !== $p->getName())
+                $list[] = $p->getName();
         }
         $this->playerlist[$player->getName()] = $list;
         $form = new CustomForm(function(Player $player, array $data = null){
