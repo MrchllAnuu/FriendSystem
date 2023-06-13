@@ -5,6 +5,7 @@ namespace Friend\SandhyR;
 use pocketmine\player\Player;
 use pocketmine\Server;
 use Vecnavium\FormsUI\CustomForm;
+use Vecnavium\FormsUI\ModalForm;
 use Vecnavium\FormsUI\SimpleForm;
 
 class FormManager{
@@ -158,7 +159,7 @@ class FormManager{
     }
 
     public function unfriendform(Player $player){
-        $form = new SimpleForm(function(Player $player, int $data = null){
+        $form = new ModalForm(function(Player $player, int $data = null){
             $result = $data;
             if ($result === null) {
                 return true;
@@ -176,8 +177,8 @@ class FormManager{
         });
         $form->setTitle("Unfriend");
         $form->setContent("Are you sure?");
-        $form->addButton("§2Yes\n§7Click To Enter");
-        $form->addButton("§2Back\n§7Click To Enter");
+        $form->addButton1("§2Yes\n§7Click To Enter");
+        $form->addButton2("§2Back\n§7Click To Enter");
         $form->sendToPlayer($player);
         return $form;
     }
