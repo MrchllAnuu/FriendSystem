@@ -55,9 +55,9 @@ class FormManager{
             return false;
         });
         $form->setTitle("Friend");
-        $form->addButton("Request Friend");
-        $form->addButton("Friend Request");
-        $form->addButton("Friend List ($friendcount)");
+        $form->addButton("§2Request Friend\n§7Click To Enter");
+        $form->addButton("§2Friend Request\n§7Click To Enter");
+        $form->addButton("§2Friend List (" . $friendcount . ")\n§7Click To Enter");
         $form->sendToPlayer($player);
         return $form;
     }
@@ -131,8 +131,8 @@ class FormManager{
             return false;
         });
         $form->setTitle("Friend Request");
-        $form->addButton("Accept");
-        $form->addButton("Deny");
+        $form->addButton("§2Accept\n§7Click To Enter");
+        $form->addButton("§2Deny\n§7Click To Enter");
         $form->sendToPlayer($player);
         return $form;
     }
@@ -176,8 +176,8 @@ class FormManager{
         });
         $form->setTitle("Unfriend");
         $form->setContent("Are you sure?");
-        $form->addButton("Yes");
-        $form->addButton("Back");
+        $form->addButton("§2Yes\n§7Click To Enter");
+        $form->addButton("§2Back\n§7Click To Enter");
         $form->sendToPlayer($player);
         return $form;
     }
